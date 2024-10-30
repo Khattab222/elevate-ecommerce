@@ -1,6 +1,7 @@
 import localFont from "next/font/local";
 import "./globals.css";
 import Header from "./_components/Header";
+import QueryProvider from "./_components/QueryProvider";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -28,8 +29,10 @@ export default function RootLayout({ children }) {
           <Header/>
       
         <main>
+<QueryProvider>
 
         {children}
+</QueryProvider>
         </main>
       </body>
     </html>
