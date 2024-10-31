@@ -1,4 +1,4 @@
-import Image from "next/image";
+
 import ProductsContainer from "./_components/product/ProductsContainer";
 
 export default function Home() {

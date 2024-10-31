@@ -1,4 +1,14 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+ ## approach:
+ this product listing page using the Fake Store API (https://fakestoreapi.com/docs).
+ i used use query to fetch data from api 
+ independ on use query library to indicate loading while fetching data and error while error in fetching data.
+
+ ## sorting 
+ use select option in sorting data ascending or descending depend on state which reftech data with new api 
+ ## searching 
+ use input change to filter products locally using filter method   
+## dark mode
+use next-theme to apply dark and light mode
 
 ## Getting Started
 

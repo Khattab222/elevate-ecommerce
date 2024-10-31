@@ -3,18 +3,18 @@ import Image from "next/image";
 const ProductCard = ({item}) => {
     const array = Array.from({ length:Math.ceil(item.rating.rate) }, (_, index) => index + 1);
   return (
-    <div className="card bg-base-100 shadow-xl cursor-pointer ">
-    <div className="relative w-full h-60 rounded-xl group overflow-hidden ">
+    <div className="card dark:bg-[#2b2a2a] group dark:text-white shadow-xl cursor-pointer  ">
+    <div className="relative w-full h-60 rounded-xl  overflow-hidden p-3">
       <Image
       fill
       priority
         src={item.image}
         alt="Shoes" 
         sizes="w-full"
-        className="rounded-xl group-hover:scale-125 transition duration-750"
+        className="rounded-xl group-hover:scale-110 transition duration-1000"
         />
     </div>
-    <div className="card-body  p-4">
+    <div className="card-body   p-4">
       <h2 className="card-title text-lg line-clamp-1">
        {item.title}
 

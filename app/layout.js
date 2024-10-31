@@ -1,18 +1,20 @@
-import localFont from "next/font/local";
 import "./globals.css";
 import Header from "./_components/Header";
 import QueryProvider from "./_components/QueryProvider";
+import { ThemeProvider } from "next-themes"
+import DarkAndLight from "./_components/ToggleButton";
+import { Lora } from 'next/font/google'
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
+
+
+const lora = Lora({
+  weight: ['400','500'],
+  subsets: ['latin'],
+  variable: '--font-poppins',
+  display: 'swap',
+})
+ 
+
 
 export const metadata = {
   title: "Create Next App",
@@ -23,17 +25,18 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${lora.className} antialiased relative bg-slate-100 dark:bg-black`}
       >
-      
+       <ThemeProvider attribute="class">
           <Header/>
-      
+          <DarkAndLight/>
         <main>
 <QueryProvider>
 
         {children}
 </QueryProvider>
         </main>
+        </ThemeProvider>
       </body>
     </html>
   );
